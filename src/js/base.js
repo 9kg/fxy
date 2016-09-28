@@ -6,23 +6,28 @@ $(function(){
     var link_android = "laizhuan://com.hb.moon.app/openwith";
 
     // 页面初始化
-    var mySwiper = new Swiper ('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.banner_title'
-    });
     $('.loading').addClass('loading_run');
     // 数据填充
     window.render_data = function(data){
         $('.data_version').text(data.version);
         $('.data_date').text(data.date);
-        $('.data_user').text(data.user);
-        $('.data_id').text(data.id);
-        $('.data_date_length').text(data.date_length);
+        if(data.id){
+            $('.data_user').text(data.user);
+            $('.data_id').text(data.id);
+            $('.data_date_length').text(data.date_length);
+        }else{
+            $('.swiper-slide').eq(0).remove();
+        }
         $('.data_user_img').css("background-image",'url('+data.user_img+')');
         $.each(data.news, function(i, item){
             i < 5 && $('.user_img_'+(i+1)).css("background-image",'url('+item.img+')');
         });
         render_news(data.news);
+
+        new Swiper ('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.banner_title'
+        });
         $('.loading').remove();
         $('body').addClass("dom_ready");
     }
@@ -100,39 +105,39 @@ setTimeout(function(){
         news: [{
                 img: "http://avatar.csdn.net/D/D/E/3_u012420654.jpg",
                 time: '1分钟前',
-                task: '网易新闻'
+                task: '网易新闻1'
         },{
                 img: "http://avatar.csdn.net/E/B/1/3_foruok.jpg",
-                time: '1分钟前',
-                task: '网易新闻'
+                time: '2分钟前',
+                task: '网易新闻22'
         },{
                 img: "http://avatar.csdn.net/4/9/8/3_a10615.jpg",
-                time: '1分钟前',
-                task: '网易新闻'
+                time: '3分钟前',
+                task: '网易新闻333'
         },{
                 img: "http://avatar.csdn.net/1/C/D/3_tianchi92.jpg",
-                time: '1分钟前',
-                task: '网易新闻'
+                time: '4分钟前',
+                task: '网易新闻4444'
         },{
                 img: "http://avatar.csdn.net/2/8/6/3_huaxun66.jpg",
-                time: '1分钟前',
-                task: '网易新闻'
+                time: '5分钟前',
+                task: '网易新闻55555'
         },{
                 img: "http://avatar.csdn.net/F/C/4/3_ty_hf.jpg",
-                time: '1分钟前',
-                task: '网易新闻'
+                time: '6分钟前',
+                task: '网易新闻666666'
         },{
                 img: "http://avatar.csdn.net/B/2/6/3_dd864140130.jpg",
-                time: '1分钟前',
-                task: '网易新闻'
+                time: '7分钟前',
+                task: '网易新闻7777777'
         },{
                 img: "http://avatar.csdn.net/E/B/F/3_wyccyw123456.jpg",
-                time: '1分钟前',
-                task: '网易新闻'
+                time: '8分钟前',
+                task: '网易新闻88888888'
         },{
                 img: "http://avatar.csdn.net/1/8/2/3_zl18603543572.jpg",
-                time: '1分钟前',
-                task: '网易新闻'
+                time: '9分钟前',
+                task: '网易新闻999999999'
         }]
     };
     render_data(data);

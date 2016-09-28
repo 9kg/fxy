@@ -66,7 +66,7 @@
     width: 100%;
 }
 .swiper-slide{
-    padding-top: 2.75rem;
+    padding-top: 1.75rem;
     box-sizing: border-box;
 }
 .swiper-pagination-bullet-active{
@@ -84,7 +84,7 @@
 }
 .banner_content{
     position: absolute;
-    top: 4.55rem;
+    top: 3.55rem;
     bottom: 1rem;
     left: 0;
     right: 0;
@@ -123,6 +123,7 @@
         width: 2rem;
         height: 1.5rem;
         background: url('../img/crown.png') no-repeat center;
+        background-size: cover;
         top: -.75rem;
         left: -.5rem;
     }
@@ -137,6 +138,7 @@
     line-height: 1.5em;
     box-shadow: 0 5px 10px #fedad5;
     color: #333;
+    max-width: 65%;
     &>.user_img{
         width: 2.9rem;
         height: 2.9rem;
@@ -355,7 +357,7 @@
     left: 0;
     right: 0;
     z-index: 11;
-    background-color: rgba(0,0,0,.65);
+    background-color: rgba(0,0,0,0);
     .loading_box{
         position: absolute;
         width: 5rem;
@@ -364,7 +366,7 @@
         left: 50%;
         margin-left: -2.5rem;
         margin-top: -2.5rem;
-        color: #fff;
+        color: #999;
         white-space: nowrap;
         font-size: .8rem;
         .loading_circle{
@@ -372,7 +374,7 @@
             margin: 0 auto 1rem;
             width: 2rem;
             height: 2rem;
-            border: 3px solid #fff;
+            border: 3px solid #fa4c37;
             border-left-color: transparent;
             border-right-color: transparent;
             border-radius: 100%;
