@@ -58,7 +58,7 @@ const cfg = (() => {
         jsmin_src: [_dev + 'js/**/*.js'],
         jsmin_to: _build + '/js/',
         clean_dev: [_dev + '*'],
-        clean_build: [_build + '*']
+        clean_build: [_build + '*', '!' + _build + "/.git"]
     };
 })();
 
