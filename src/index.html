@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- 添加智能 App 广告条 Smart App Banner：告诉浏览器这个网站对应的app  app-id必选  其他可选-->
+    <meta name="apple-itunes-app" content="app-id=1103180579, affiliate-data=myAffiliateData, app-argument=myURL">
+    <!-- 启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。content的值为default | black | black-translucent 。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" name="no-store">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>来赚</title>
+    <link rel="stylesheet" href="./css/base.css" media="screen">
+    <script type="text/javascript">
+        var initPage = function() {
+            var tag_html = document.documentElement;
+            // 初始化rem
+            var cssEl = document.createElement('style');
+            tag_html.firstElementChild.appendChild(cssEl);
+            cssEl.innerHTML = 'html{font-size:' + document.documentElement.clientHeight / 33.35 + 'px}';
+            // 设备区分
+            window.cur_device = (function() {
+                var ua = navigator.userAgent;
+                var android = ua.match(/(Android);?[\s\/]+([\d.]+)?/);
+                var ipad = ua.match(/(iPad).*OS\s([\d_]+)/);
+                var ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/);
+                var iphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/);
+                var wechat = ua.match(/MicroMessenger/i);
+                return {
+                    ios: ipad || iphone || ipod,
+                    android: android,
+                    wechat: wechat
+                };
+            })();
+            if (cur_device.ios) {
+                tag_html.className = 'ios';
+            } else if (cur_device.android) {
+                tag_html.className = 'android';
+            } else {
+                // 如果不是安卓和苹果，暂定是安卓吧
+                tag_html.className = 'android';
+            }
+
+        };
+        initPage();
+        window.onresize = function() {
+            initPage.times && clearTimeout(initPage.times);
+            initPage.times = setTimeout(function() {
+                initPage();
+            }, 300);
+        };
+    </script>
+</head>
+
+<body>
+    <h1 class="iconfont icon_logo logo">
+        <div class="mobile_version android_show">安卓版</div>
+        <div class="mobile_version ios_show">iOS版</div>
+    </h1>
+    <h2 class="slogan">简单操作 · 轻松来赚</h2>
+    <div class="btn btn_install">
+        <span class="ios_show">
+            <i class="iconfont icon_apple"></i>
+            安装助手
+        </span>
+        <span class="android_show">
+            <i class="iconfont icon_download"></i>
+            下载来赚
+        </span>
+    </div>
+    <div class="btn btn_start_up">
+        <i class="iconfont icon_rocket"></i> 启动来赚
+    </div>
+    <p class="install_tip ios_show">安装运行后，若不是来赚界面返回启动来赚</p>
+    <p class="version_info">
+        <span class="version">版本<span class="data_version">--</span></span>
+        <span class="date data_date">-/-/-</span>
+    </p>
+    <!-- banner -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <h3 class="banner_title">
+                    我是来赚小达人
+                    <span class="next_icons">
+                        <i class="iconfont icon_right next_icon_1"></i>
+                        <i class="iconfont icon_right next_icon_2"></i>
+                    </span>
+                </h3>
+                <div class="banner_content">
+                    <div class="banner_dialog shake">
+                        <div class="user_img data_user_img"><i class="crown"></i></div>
+                        我是 <span class="user_name data_user">--</span> (ID <span class="user_id data_id">--</span>)<br> 我玩来赚已经 <span class="day_length data_date_length">--</span> 天了<br> 邀请你来一起试玩！
+                        <br> 完全免费哟！
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide ios_show">
+                <h3 class="banner_title">
+                    来赚安装小攻略
+                    <span class="next_icons">
+                        <i class="iconfont icon_right next_icon_1"></i>
+                        <i class="iconfont icon_right next_icon_2"></i>
+                    </span>
+                </h3>
+                <div class="banner_content">
+                    <div class="banner_dialog">
+                        <div class="user_img data_user_img shake"><i class="crown"></i></div>
+                        1)点击安装，进入Appstore<br> 2)安装助手 > 来赚<span class="laizhuan_icon">来赚</span><br> 3)去桌面打开运行来赚即可
+                        <br>
+                        <p class="mind">若运行后不是来赚界面<br>请返回微信“启动来赚”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <h3 class="banner_title">
+                    来赚用户小攻略
+                    <span class="next_icons">
+                        <i class="iconfont icon_right next_icon_1"></i>
+                        <i class="iconfont icon_right next_icon_2"></i>
+                    </span>
+                </h3>
+                <div class="banner_content">
+                    <div class="user_guide">
+                        <a href="javascript:;" class="btn btn_play shadow_spread"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <h3 class="banner_title">
+                    好东西，就要和朋友一起玩
+                    <span class="next_icons">
+                        <i class="iconfont icon_right next_icon_1"></i>
+                        <i class="iconfont icon_right next_icon_2"></i>
+                    </span>
+                </h3>
+                <div class="banner_content">
+                    <div class="banner_friend">
+                        <div class="user_img user_img_1"></div>
+                        <div class="user_img user_img_2"></div>
+                        <div class="user_img user_img_3"></div>
+                        <div class="user_img user_img_4"><i class="crown"></i></div>
+                        <div class="user_img user_img_5"></div>
+                        <div class="banner_friend_circles">
+                            <div class="circle circle_1"></div>
+                            <div class="circle circle_2"></div>
+                            <div class="circle circle_3"></div>
+                            <div class="circle circle_4"></div>
+                            <div class="circle circle_5"></div>
+                            <div class="circle circle_6"></div>
+                            <div class="circle circle_7"></div>
+                            <div class="circle circle_8"></div>
+                            <div class="circle circle_9"></div>
+                        </div>
+
+                        <div class="banner_friend_box">
+                            <div class="friend_box_content"></div>
+                            Bestfriend
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <h3 class="banner_title">
+                    最新用户动态
+                </h3>
+                <div class="banner_content">
+                    <ul class="user_news">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="loading">
+        <div class="loading_box">
+            <i class="loading_circle"></i>
+            正在加载···
+        </div>
+    </div>
+    <script src="../js/base.js" charset="utf-8"></script>
+</body>
+
+</html>

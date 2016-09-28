@@ -1,0 +1,24 @@
+.android_show,
+.ios_show {
+    display: none;
+}
+
+.install_tip.ios_show {
+    opacity: 0;
+    display: block;
+}
+
+html.ios {
+    .ios_show {
+        display: block;
+    }
+    .install_tip.ios_show {
+        opacity: 1;
+    }
+}
+
+html.android {
+    .android_show {
+        display: block;
+    }
+}
