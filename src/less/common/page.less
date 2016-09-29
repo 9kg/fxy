@@ -349,7 +349,6 @@
     }
 }
 
-
 .loading{
     position: absolute;
     top: 0;
@@ -358,33 +357,21 @@
     right: 0;
     z-index: 11;
     background-color: rgba(0,0,0,0);
-    .loading_box{
+    .loading_circle{
         position: absolute;
-        width: 5rem;
-        height: 5rem;
+        width: 2rem;
+        height: 2rem;
         top: 50%;
         left: 50%;
-        margin-left: -2.5rem;
-        margin-top: -2.5rem;
-        color: #999;
-        white-space: nowrap;
-        font-size: .8rem;
-        .loading_circle{
-            display: block;
-            margin: 0 auto 1rem;
-            width: 2rem;
-            height: 2rem;
-            border: 3px solid #fa4c37;
-            border-left-color: transparent;
-            border-right-color: transparent;
-            border-radius: 100%;
-            transform: translateY(-8rem);
-            transition: all .7s ease;
-            opacity: 0;
-        }
+        margin-left: -1rem;
+        margin-top: -1rem;
+        border: 3px solid #fa4c37;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-radius: 100%;
     }
 }
+
 .loading.loading_run .loading_circle{
-    transform: translateY(0);
     opacity: 1;
 }
