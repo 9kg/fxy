@@ -96,7 +96,7 @@ $(function(){
 // 模拟数据
 setTimeout(function(){
     var data = {
-        version: '3.0.0.1',
+        version: '3.0.1',
         date: '2016/11/11',
         user: '雪人努努',
         id: '30743522',
